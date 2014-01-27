@@ -3,6 +3,10 @@
 
     <string name="app_name">Enigmi</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-
+    <string name="Button1_main">Continua</string>
+    <string name="Button2_main">Seleziona il livello</string>
+    <string name="Button3_main">EXIT</string>
+    <string name="copyright">Copyright &#169; 2014 &#10; La Marca &#38; Lucci</string>
+    
+    
 </resources>
