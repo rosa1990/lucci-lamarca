@@ -25,14 +25,14 @@ public class MainActivity extends Activity {
         
         //Quit Dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Sei sicuro di voler uscire?")
+        builder.setMessage(R.string.Fine)
                .setCancelable(false)
-               .setPositiveButton("Si'", new DialogInterface.OnClickListener() {
+               .setPositiveButton(R.string.si, new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int id) {
                            MainActivity.this.finish();
                    }
                })
-               .setNegativeButton("No", new DialogInterface.OnClickListener() {
+               .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
                    }
@@ -41,11 +41,11 @@ public class MainActivity extends Activity {
         
         //Button3 action
         exit.setOnClickListener(new View.OnClickListener() {
-                @SuppressWarnings("deprecation")
 				@Override
                 public void onClick(View v) {
 	                // mostra il quit dialog
-	                showDialog(QUIT_DIALOG_ID);
+                	quitDialog.show();
+	               
                 }
         });
         //Button3 action
@@ -54,25 +54,30 @@ public class MainActivity extends Activity {
                 public void onClick(View v) {
                     // TODO Auto-generated method stub
 					startActivity(new Intent(MainActivity.this,SelectLV.class)); 
-                }
+               
+				}
         });
         //Button3 action
         continua.setOnClickListener(new View.OnClickListener() {
 				@Override
                 public void onClick(View v) {
                         // TODO Auto-generated method stub
+					//TODO prendere ultimo livello dal file
+					int lastLevel=1;
+					
+					Intent i;
+					switch (lastLevel) {
+			         case 0:
+			        	  i= new Intent(MainActivity.this,Livello1Activity.class);
+			     		 startActivity(i);
+			         case 1:
+			        	 i= new Intent(MainActivity.this,Livello2Activity.class);
+			     		 startActivity(i);
+					}
                 }
         });
         
-           continua.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				Intent i= new Intent(MainActivity.this,ContinuaActivity.class);
-				startActivity(i);
-			}
-		});
+
     }
     @Override
     protected Dialog onCreateDialog(int id) {

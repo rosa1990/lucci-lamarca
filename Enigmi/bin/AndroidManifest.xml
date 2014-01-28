@@ -28,11 +28,7 @@
             android:label="@string/title_activity_select_lv"
             android:screenOrientation="portrait" >
         </activity>
-        <activity
-            android:name="com.example.enigmi.ContinuaActivity"
-            android:label="@string/title_activity_continua"
-            android:screenOrientation="portrait" >
-        </activity>
+
         <activity
             android:name="com.example.enigmi.Livello1Activity"
             android:label="@string/title_activity_livello1"
