@@ -7,6 +7,6 @@
     <string name="Button2_main">Seleziona il livello</string>
     <string name="Button3_main">EXIT</string>
     <string name="copyright">Copyright &#169; 2014 &#10; La Marca &#38; Lucci</string>
-    
-    
+    <string name="title_activity_select_lv">SelectLV</string>
+
 </resources>

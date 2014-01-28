@@ -11,8 +11,8 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
     private AlertDialog quitDialog;
-	private Button exit,select,continua;
-	static final int QUIT_DIALOG_ID = 1;
+        private Button exit,select,continua;
+        static final int QUIT_DIALOG_ID = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
                .setCancelable(false)
                .setPositiveButton("Si'", new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int id) {
-                	   MainActivity.this.finish();
+                           MainActivity.this.finish();
                    }
                })
                .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -37,19 +37,20 @@ public class MainActivity extends Activity {
                });
         quitDialog = builder.create();
         exit.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				showDialog(QUIT_DIALOG_ID);
-			}
-		});
+                        
+                        @SuppressWarnings("deprecation")
+						@Override
+                        public void onClick(View v) {
+                                // TODO Auto-generated method stub
+                                showDialog(QUIT_DIALOG_ID);
+                        }
+                });
     }
     @Override
     protected Dialog onCreateDialog(int id) {
-        	switch (id) {
-        	case QUIT_DIALOG_ID:
-        		return quitDialog;      	
+                switch (id) {
+                case QUIT_DIALOG_ID:
+                        return quitDialog;              
         }
         return null;
     };

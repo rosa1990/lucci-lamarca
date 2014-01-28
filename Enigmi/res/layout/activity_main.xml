@@ -36,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:onClick="@string/Button2_main"
         android:text="@string/Button2_main"
         android:textSize="25sp" />
 
