@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
@@ -42,8 +42,7 @@
         <activity
             android:name="com.example.enigmi.Livello0Activity"
             android:label="@string/title_activity_livello0" 
-            android:screenOrientation="portrait" >
-            
+            android:screenOrientation="portrait" >    
         </activity>
     </application>
 

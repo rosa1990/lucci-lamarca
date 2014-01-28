@@ -29,7 +29,7 @@ public class SelectLV extends Activity {
                 	startActivity(new Intent(SelectLV.this,Livello0Activity.class));
                 break;
                 default: 
-                	Toast.makeText(SelectLV.this, "" + position, Toast.LENGTH_SHORT).show();
+                	Toast.makeText(SelectLV.this, "Working in progress", Toast.LENGTH_SHORT).show();
 	        	break;
 	        	}
 	        }
