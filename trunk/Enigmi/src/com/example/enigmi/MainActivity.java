@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,7 @@ public class MainActivity extends Activity {
         select = (Button) findViewById (R.id.button2);
         continua = (Button) findViewById (R.id.button1);
         
+        //Quit Dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("Sei sicuro di voler uscire?")
                .setCancelable(false)
@@ -36,15 +38,31 @@ public class MainActivity extends Activity {
                    }
                });
         quitDialog = builder.create();
+        
+        //Button3 action
         exit.setOnClickListener(new View.OnClickListener() {
-                        
-                        @SuppressWarnings("deprecation")
-						@Override
-                        public void onClick(View v) {
-                                // TODO Auto-generated method stub
-                                showDialog(QUIT_DIALOG_ID);
-                        }
-                });
+                @SuppressWarnings("deprecation")
+				@Override
+                public void onClick(View v) {
+	                // mostra il quit dialog
+	                showDialog(QUIT_DIALOG_ID);
+                }
+        });
+        //Button3 action
+        select.setOnClickListener(new View.OnClickListener() {
+				@Override
+                public void onClick(View v) {
+                    // TODO Auto-generated method stub
+					startActivity(new Intent(MainActivity.this,SelectLV.class)); 
+                }
+        });
+        //Button3 action
+        continua.setOnClickListener(new View.OnClickListener() {
+				@Override
+                public void onClick(View v) {
+                        // TODO Auto-generated method stub
+                }
+        });
     }
     @Override
     protected Dialog onCreateDialog(int id) {
