@@ -15,8 +15,8 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.enigmi.MainActivity"
-            android:label="@string/app_name" 
-            android:screenOrientation="portrait">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,23 +25,29 @@
         </activity>
         <activity
             android:name="com.example.enigmi.SelectLV"
-            android:label="@string/title_activity_select_lv" 
-            android:screenOrientation="portrait">
+            android:label="@string/title_activity_select_lv"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.enigmi.ContinuaActivity"
-            android:label="@string/title_activity_continua" 
-            android:screenOrientation="portrait">
+            android:label="@string/title_activity_continua"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.enigmi.Livello1Activity"
-            android:label="@string/title_activity_livello1" 
-            android:screenOrientation="portrait">
+            android:label="@string/title_activity_livello1"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.example.enigmi.Livello2Activity"
-            android:label="@string/title_activity_livello2" 
-            android:screenOrientation="portrait">
+            android:label="@string/title_activity_livello2"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.enigmi.Livello0Activity"
+            android:label="@string/title_activity_livello0" 
+            android:screenOrientation="portrait" >
+            
         </activity>
     </application>
 

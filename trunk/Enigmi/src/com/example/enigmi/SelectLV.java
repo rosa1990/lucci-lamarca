@@ -26,7 +26,7 @@ public class SelectLV extends Activity {
 	           // Toast.makeText(SelectLV.this, "" + position, Toast.LENGTH_SHORT).show();
 	        	switch (position) {
                 case 0: 
-                	startActivity(new Intent(SelectLV.this,Livello1Activity.class));
+                	startActivity(new Intent(SelectLV.this,Livello0Activity.class));
                 break;
                 default: 
                 	Toast.makeText(SelectLV.this, "" + position, Toast.LENGTH_SHORT).show();
