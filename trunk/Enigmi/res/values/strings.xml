@@ -12,6 +12,13 @@
     <string name="title_activity_livello0">Livello0Activity</string>
     <string name="title_activity_livello1">Livello1Activity</string>
     <string name="title_activity_livello2">Livello2Activity</string>
+    <string name="annulla">Annulla</string>
+    <string name="TornaMenu">Torna al Men&#249;</string>
+    <string name="Pausa">Pausa</string>
+    <string name="Fine">Sei sicuro di voler uscire&#63;</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
     <string name="Welcome">Benvenuto in questa fantastica App che ti trascina in un mondo di mistero dove l\'unico modo per procedere sar\à spremere al massimo quell\'affare posto tra quelle belle orecchie che ti ritrovi!! \n\n Per superare i livelli dovrai scoprire la parola che ti permetter\à di accedere al livello successivo. \n\n Le regole sono semplici: \n\t Osserva \n\t Interagisci con il dispositivo \n\t Prova</string>
+
 
 </resources>
