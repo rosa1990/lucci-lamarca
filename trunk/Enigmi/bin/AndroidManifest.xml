@@ -26,6 +26,18 @@
             android:name="com.example.enigmi.SelectLV"
             android:label="@string/title_activity_select_lv" >
         </activity>
+        <activity
+            android:name="com.example.enigmi.ContinuaActivity"
+            android:label="@string/title_activity_continua" >
+        </activity>
+        <activity
+            android:name="com.example.enigmi.Livello1Activity"
+            android:label="@string/title_activity_livello1" >
+        </activity>
+        <activity
+            android:name="com.example.enigmi.Livello2Activity"
+            android:label="@string/title_activity_livello2" >
+        </activity>
     </application>
 
 </manifest>

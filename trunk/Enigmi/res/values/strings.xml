@@ -8,5 +8,9 @@
     <string name="Button3_main">EXIT</string>
     <string name="copyright">Copyright &#169; 2014 &#10; La Marca &#38; Lucci</string>
     <string name="title_activity_select_lv">SelectLV</string>
+    <string name="title_activity_continua">ContinuaActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_livello1">Livello1Activity</string>
+    <string name="title_activity_livello2">Livello2Activity</string>
 
 </resources>

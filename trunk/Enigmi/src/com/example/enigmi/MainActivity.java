@@ -63,6 +63,16 @@ public class MainActivity extends Activity {
                         // TODO Auto-generated method stub
                 }
         });
+        
+           continua.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i= new Intent(MainActivity.this,ContinuaActivity.class);
+				startActivity(i);
+			}
+		});
     }
     @Override
     protected Dialog onCreateDialog(int id) {
