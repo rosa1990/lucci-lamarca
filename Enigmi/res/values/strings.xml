@@ -9,8 +9,9 @@
     <string name="copyright">Copyright &#169; 2014 &#10; La Marca &#38; Lucci</string>
     <string name="title_activity_select_lv">SelectLV</string>
     <string name="title_activity_continua">ContinuaActivity</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_livello0">Livello0Activity</string>
     <string name="title_activity_livello1">Livello1Activity</string>
     <string name="title_activity_livello2">Livello2Activity</string>
+    <string name="Welcome">Benvenuto in questa fantastica App che ti trascina in un mondo di mistero dove l\'unico modo per procedere sar\à spremere al massimo quell\'affare posto tra quelle belle orecchie che ti ritrovi!! \n\n Per superare i livelli dovrai scoprire la parola che ti permetter\à di accedere al livello successivo. \n\n Le regole sono semplici: \n\t Osserva \n\t Interagisci con il dispositivo \n\t Prova</string>
 
 </resources>
