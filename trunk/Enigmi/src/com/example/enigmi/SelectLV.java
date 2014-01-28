@@ -2,6 +2,7 @@ package com.example.enigmi;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
@@ -22,7 +23,15 @@ public class SelectLV extends Activity {
 
 	    gridview.setOnItemClickListener(new OnItemClickListener() {
 	        public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-	            Toast.makeText(SelectLV.this, "" + position, Toast.LENGTH_SHORT).show();
+	           // Toast.makeText(SelectLV.this, "" + position, Toast.LENGTH_SHORT).show();
+	        	switch (position) {
+                case 0: 
+                	startActivity(new Intent(SelectLV.this,Livello1Activity.class));
+                break;
+                default: 
+                	Toast.makeText(SelectLV.this, "" + position, Toast.LENGTH_SHORT).show();
+	        	break;
+	        	}
 	        }
 	    });
 	}
@@ -31,7 +40,7 @@ public class SelectLV extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.select_lv, menu);
-		return true;
+		return false;
 	}
 
 }
