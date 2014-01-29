@@ -17,11 +17,14 @@
     <string name="Lv1_2">Troppo semplice &#33;&#63; \nAvanza che presto ti far&#242; cambiare idea &#63;&#63;&#63; </string>
     <string name="annulla">Annulla</string>
     <string name="TornaMenu">Torna al Men&#249;</string>
-    <string name="Pausa">Pausa</string>
+    <string name="Pausa">Ti arrendi?!</string>
     <string name="Fine">Sei sicuro di voler uscire&#63;</string>
     <string name="si">Si</string>
     <string name="no">No</string>
     <string name="edit_message">Inserisci la risposta</string>
     <string name="next">Next Button&#224; premi per passare al livello successivo</string>
+    <string name="Prova">Prova</string>
+    <string name="help1">L\'indizio &#232; così grande che non puoi non vederlo &#63;&#63;</string>
+    
     
 </resources>
