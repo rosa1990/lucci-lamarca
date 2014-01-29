@@ -31,19 +31,6 @@
         android:contentDescription="@string/next"
         android:src="@drawable/next1" />
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:hint="@string/edit_message" >
-
-        <requestFocus />
-    </EditText>
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -54,5 +41,24 @@
         android:focusable="false"
         android:text="@string/Lv1_2"
         android:textSize="23sp" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/edit_message" />
+
+    <Button
+        android:id="@+id/lv1button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText1"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignRight="@+id/textView1"
+        android:text="@string/Prova" />
 
 </RelativeLayout>

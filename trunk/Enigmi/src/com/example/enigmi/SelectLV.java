@@ -26,7 +26,10 @@ public class SelectLV extends Activity {
 	           // Toast.makeText(SelectLV.this, "" + position, Toast.LENGTH_SHORT).show();
 	        	switch (position) {
                 case 0: 
-                	startActivity(new Intent(SelectLV.this,Livello0Activity.class));
+                	startActivity(new Intent(SelectLV.this,Livello1Activity.class));
+                break;
+                case 1: 
+                	startActivity(new Intent(SelectLV.this,Livello2Activity.class));
                 break;
                 default: 
                 	Toast.makeText(SelectLV.this, "Working in progress", Toast.LENGTH_SHORT).show();
