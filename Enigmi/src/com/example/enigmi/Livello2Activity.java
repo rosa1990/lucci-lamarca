@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 
 
 public class Livello2Activity extends Activity {
@@ -20,7 +21,7 @@ public class Livello2Activity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.livello2, menu);
+	//	getMenuInflater().inflate(R.menu.livello2, menu);
 		return false;
 	}
    
@@ -34,7 +35,9 @@ public class Livello2Activity extends Activity {
                .setCancelable(false)
                .setPositiveButton(R.string.TornaMenu, new DialogInterface.OnClickListener() {
                    public void onClick(DialogInterface dialog, int id) {
-                	   Livello2Activity.this.finish();
+                	 Intent i= new Intent(Livello2Activity.this,MainActivity.class);
+                     i.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                     startActivity(i);
                    }
                })
                .setNegativeButton(R.string.annulla, new DialogInterface.OnClickListener() {
