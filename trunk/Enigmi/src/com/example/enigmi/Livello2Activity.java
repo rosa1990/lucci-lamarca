@@ -31,11 +31,11 @@ public class Livello2Activity extends Activity {
 		
 		//Intent i=new Intent(MediaStore.Audio.Media.RECORD_SOUND_ACTION);
 	  //  startActivityForResult(i,RQS_RECORDING);
-	    // startRecording();
-	  //   if (mRecorder != null) {
-	   // 	  stopRecording();
+	     startRecording();
+	    if (mRecorder != null) {
+	    	  stopRecording();
 	            mRecorder = null;
-	  //      }
+	       }
 	  
 	}
 
