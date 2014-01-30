@@ -7,11 +7,11 @@
     <string name="Button2_main">Seleziona il livello</string>
     <string name="Button3_main">EXIT</string>
     <string name="copyright">Copyright &#169; 2014 &#10; La Marca &#38; Lucci</string>
-    <string name="title_activity_select_lv">SelectLV</string>
-    <string name="title_activity_continua">ContinuaActivity</string>
-    <string name="title_activity_livello0">Livello0Activity</string>
-    <string name="title_activity_livello1">Livello1Activity</string>
-    <string name="title_activity_livello2">Livello2Activity</string>
+    <string name="title_activity_select_lv">Enigmi</string>
+    <string name="title_activity_continua">Enigmi</string>
+    <string name="title_activity_livello0">Livello0</string>
+    <string name="title_activity_livello1">Livello1</string>
+    <string name="title_activity_livello2">Livello2</string>
     <string name="Welcome">Benvenuto in questa fantastica App che ti trascina in un mondo di mistero dove l\'unico modo per procedere sar&#224; spremere al massimo quell\'affare posto tra quelle belle orecchie che ti ritrovi!! \n\nPer superare i livelli dovrai scoprire la parola che ti permetter&#224; di accedere al livello successivo. \n\nLe regole sono semplici: \n\t 1) Osserva tutti i dettagli \n\t 2) Interagisci con il dispositivo \n\t 3) Dimostra la tua abilit&#224; </string>
     <string name="Lv1">Questo è il primo livello, per passare al LIVELLO2 dovrai capire qual\'&#233; la parola da inserire qui sotto.</string>
     <string name="Lv1_2">Troppo semplice &#33;&#63; \nAvanza che presto ti far&#242; cambiare idea &#63;&#63;&#63; </string>
@@ -25,10 +25,12 @@
     <string name="next">Next Button&#224; premi per passare al livello successivo</string>
     <string name="Prova">Prova</string>
     <string name="help1">L\'indizio &#232; così grande che non puoi non vederlo &#63;&#63;</string>
+    <string name="fuoco">Fuoco</string>
+    <string name="lv2">Vuoi passare al livello 3 &#63; Spegni il fuoco velocemente</string>
     <string name="title_activity_livello3">Livello3Activity</string>
-    <string name="hello_world">Hello world!</string>
     <string name="Image">Immagine di gioco</string>
     <string name="help3">Conosci il sensore di luminosit&#224;&#63;</string>
     <string name="help3_1">Men&#249;</string>
     <string name="help3_2">Visto che non hai il sensore di luminosit&#224;: LO</string>
+  
 </resources>
