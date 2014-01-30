@@ -3,10 +3,16 @@ package com.example.enigmi;
 
 import java.io.IOException;
 
+
 import android.media.MediaRecorder;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -16,40 +22,56 @@ import android.content.Intent;
 
 public class Livello2Activity extends Activity {
 	
-    private static final String LOG_TAG = "AudioRecordTest";
-    private static String mFileName = null;
-
-   
+  private static final String LOG_TAG = "AudioRecordTest";
     private MediaRecorder mRecorder = null;
-
-	 final static int RQS_RECORDING=1;
-	 
+	
+	Button start,stop;
+	ImageView fuoco;
+	TextView testo;
+	double amplitude;
+	static final private double EMA_FILTER = 0.6;
+	 private double mEMA = 0.0;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_livello2);
+		testo = (TextView) findViewById (R.id.textViewLv2);
+		fuoco = (ImageView) findViewById (R.id.imageViewLv2);
+		start = (Button) findViewById (R.id.button2_lv2);
+		start.setOnClickListener(new View.OnClickListener() {
+			@Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+				startRecording(); 
+           
+			}
+    });
 		
-		//Intent i=new Intent(MediaStore.Audio.Media.RECORD_SOUND_ACTION);
-	  //  startActivityForResult(i,RQS_RECORDING);
-	     startRecording();
-	    if (mRecorder != null) {
-	    	  stopRecording();
-	            mRecorder = null;
-	       }
-	  
+		stop = (Button) findViewById (R.id.button1_lv2);
+		stop.setOnClickListener(new View.OnClickListener() {
+			@Override
+            public void onClick(View v) {			
+				if (mRecorder ==null)
+					Toast.makeText(Livello2Activity.this, R.string.ritenta, Toast.LENGTH_LONG).show();
+				else 
+					stopRecording();
+			}
+    });
+		
+	
 	}
+	
 
 	private void startRecording() {
-		if (mRecorder != null) {
-			
-			      mRecorder.release();
-			
-			   }
+		if (mRecorder == null) {
 
         mRecorder = new MediaRecorder();
         mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-        mRecorder.setOutputFile(mFileName);
+       String audio_file = Environment.getExternalStorageDirectory().getAbsolutePath() + "/audio_recording.3gp";
+        Log.d("FILE PATH ORIGINAL", audio_file);
+        mRecorder.setOutputFile(audio_file);
         mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
 
         try {
@@ -57,28 +79,60 @@ public class Livello2Activity extends Activity {
         } catch (IOException e) {
             Log.e(LOG_TAG, "prepare() failed");
         }
-
+        mRecorder.getMaxAmplitude();
         mRecorder.start();
+        amplitude = getAmplitudeEMA();
+       
+		}
     }
 
     private void stopRecording() {
-        mRecorder.stop();
-        mRecorder.release();
-        mRecorder = null;
-	        
-	    startActivity(new Intent(Livello2Activity.this,Livello1Activity.class)); 
-	    
+    	
+    	if (mRecorder != null) {
+    		 amplitude = getAmplitudeEMA();
+    	       
+            mRecorder.stop();   
+            mRecorder.release();
+            mRecorder = null;
+    }
+        if (amplitude>0 && amplitude<2){
+			  mRecorder = null;
+			  start.setVisibility(View.INVISIBLE);
+			  stop.setVisibility(View.INVISIBLE);
+			  testo.setVisibility(View.INVISIBLE);
+			  
+			  fuoco.setImageResource(R.drawable.next2);
+			  fuoco.setClickable(true);
+			  fuoco.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					  startActivity(new Intent(Livello2Activity.this,Livello3Activity.class));
+				}
+			});
+		}else Toast.makeText(Livello2Activity.this, R.string.help2, Toast.LENGTH_LONG).show();
+
+			  
+       
 	}
 
-	
-	
-	@Override
-	protected void onActivityResult(int requestCode,int resultCode,Intent Data){
-		if (requestCode==RQS_RECORDING)
-			Toast.makeText(Livello2Activity.this, "preso audio", Toast.LENGTH_LONG).show();
-	}
-	
-	
+    public double getAmplitude() {
+        if (mRecorder != null)
+                return  (mRecorder.getMaxAmplitude()/2700.0);
+        else
+                return 0;
+
+}
+
+    public double getAmplitudeEMA() {
+        double amp = getAmplitude();
+        mEMA = EMA_FILTER * amp + (1.0 - EMA_FILTER) * mEMA;
+        return mEMA;
+}
+
+    
+    
+    
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
