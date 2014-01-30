@@ -28,7 +28,6 @@
             android:label="@string/title_activity_select_lv"
             android:screenOrientation="portrait" >
         </activity>
-
         <activity
             android:name="com.example.enigmi.Livello1Activity"
             android:label="@string/title_activity_livello1"
@@ -41,8 +40,13 @@
         </activity>
         <activity
             android:name="com.example.enigmi.Livello0Activity"
-            android:label="@string/title_activity_livello0" 
-            android:screenOrientation="portrait" >    
+            android:label="@string/title_activity_livello0"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.enigmi.Livello3Activity"
+            android:label="@string/title_activity_livello3"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 
