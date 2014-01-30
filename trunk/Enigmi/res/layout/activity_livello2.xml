@@ -10,14 +10,14 @@
     tools:context=".Livello2Activity" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textViewLv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lv2"
-        android:textSize="35sp" />
+        android:textSize="30sp" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imageViewLv2"
         android:layout_width="300sp"
         android:layout_height="300sp" 
         android:layout_centerVertical="true"
@@ -25,5 +25,25 @@
         android:clickable="false"
         android:contentDescription="@string/fuoco"
         android:src="@drawable/fuoco" />
+
+    <Button
+        android:id="@+id/button1_lv2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/stop" />
+
+    <Button
+        android:id="@+id/button2_lv2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1_lv2"
+        android:layout_alignBottom="@+id/button1_lv2"
+        android:layout_alignLeft="@+id/imageViewLv2"
+        android:onClick="@string/start"
+        android:text="@string/start" />
 
 </RelativeLayout>
