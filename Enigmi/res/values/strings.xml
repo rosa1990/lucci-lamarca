@@ -25,6 +25,10 @@
     <string name="next">Next Button&#224; premi per passare al livello successivo</string>
     <string name="Prova">Prova</string>
     <string name="help1">L\'indizio &#232; così grande che non puoi non vederlo &#63;&#63;</string>
-    
-    
+    <string name="title_activity_livello3">Livello3Activity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Image">Immagine di gioco</string>
+    <string name="help3">Conosci il sensore di luminosit&#224;&#63;</string>
+    <string name="help3_1">Men&#249;</string>
+    <string name="help3_2">Visto che non hai il sensore di luminosit&#224;: LO</string>
 </resources>
