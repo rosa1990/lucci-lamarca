@@ -28,14 +28,32 @@
     <string name="help1">L\'indizio &#232; così grande che non puoi non vederlo &#63;&#63;</string>
     <string name="fuoco">Fuoco</string>
     <string name="lv2">Vuoi passare al livello 3 &#63; Spegni il fuoco velocemente</string>
-    <string name="title_activity_livello3">Livello3Activity</string>
     <string name="Image">Immagine di gioco</string>
     <string name="help3">Conosci il sensore di luminosit&#224;&#63;</string>
     <string name="help3_1">Men&#249;</string>
     <string name="help3_2">Visto che non hai il sensore di luminosit&#224;: LO</string>
     <string name="stop">Stop interaction</string>
     <string name="start">Start interaction</string>
-	<string name="prevStop">Voui fermare una cosa mai iniziata?</string>
-	<string name="ritenta">Sbagliato! Ritenta</string>
-	<string name="help2">Pi&#249; forte!!</string>
+    <string name="prevStop">Voui fermare una cosa mai iniziata?</string>
+    <string name="ritenta">Sbagliato! Ritenta</string>
+    <string name="help_LV2_3">Pi&#249; forte!!</string>
+    <string name="help_LV2_2">Esagerato, vai piano</string> 
+    <string name="title_activity_fine">Fine</string>
+    <string name="Congratulazioni">Mi hai battuto, hai risolto tutti gli enigmi che avevo preparato per te. \n\nNon temere che mi farò presto vivo con altri fantastici Enigmi!!!</string>
+	<string name="Reset">Reset</string>
+	<!--
+	<string name="Sol_LV1_1">LIVELLO2</string>
+	<string name="Sol_LV1_2">LIVELLO 2</string>
+	<string name="Sol_LV1_3">Livello2</string>
+	<string name="Sol_LV1_4">Livello 2</string>
+	<string name="Sol_LV1_5">livello2</string>
+	<string name="Sol_LV1_6">livello 2</string>
+	<string name="Sol_LV3_1">LOVE</string>
+	<string name="Sol_LV3_2">love</string>
+	<string name="Sol_LV3_3">Love</string>
+	<string name="Sol_LV3_4">Love </string>
+	<string name="Sol_LV3_5">LOVE </string>
+	<string name="Sol_LV3_6">love </string>-->
+	
+
 </resources>

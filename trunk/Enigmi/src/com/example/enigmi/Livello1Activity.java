@@ -1,10 +1,13 @@
 package com.example.enigmi;
 
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -37,7 +40,8 @@ public class Livello1Activity extends Activity {
 			@Override
 			public void onClick(View v) {
 				input = editText.getText().toString();
-				if(input.equals("LIVELLO2")||input.equals("livello2")||input.equals("LIVELLO 2")||input.equals("livello 2")){
+				if(input.equals("LIVELLO2")||input.equals("LIVELLO 2")||input.equals("Livello2")
+						||input.equals("Livello 2")||input.equals("livello2")||input.equals("livello 2")){
 					testo2.setVisibility(View.VISIBLE);
 					testo2.setText(R.string.Lv1_2);
 					next.setVisibility(View.VISIBLE);
@@ -50,7 +54,7 @@ public class Livello1Activity extends Activity {
         next.setOnClickListener(new View.OnClickListener() {
 				@Override
                 public void onClick(View v) {
-                    // Iniziamo con il primo livello
+					savePreferences("LV_complete", 1);
 					startActivity(new Intent(Livello1Activity.this,Livello2Activity.class)); 
                 }
         });
@@ -88,6 +92,11 @@ public class Livello1Activity extends Activity {
        pauseDialog.show();
        
    	 } 
-	   
+    private void savePreferences(String key, int value) {
+		SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+		Editor editor = sharedPreferences.edit();
+		editor.putInt(key, value);
+		editor.commit();
+	} 
 
 }
