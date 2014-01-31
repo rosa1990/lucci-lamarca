@@ -19,10 +19,10 @@ public class Fine extends Activity {
 		getMenuInflater().inflate(R.menu.fine, menu);
 		return false;
 	}
-	 @Override
-	    public void onBackPressed() {
-    	 Intent i= new Intent(Fine.this,MainActivity.class);
-         i.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP|Intent.FLAG_ACTIVITY_CLEAR_TOP);
-         startActivity(i);
-	    }
+	@Override
+	public void onBackPressed() {
+    	Intent i= new Intent(Fine.this,MainActivity.class);
+    	i.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+	    startActivity(i);
+	}
 }
