@@ -82,7 +82,6 @@ public class Livello3Activity extends Activity implements SensorEventListener{
             else{
                 //non è buio
                 giorno_notte.setImageResource(R.drawable.lv3_a);
-                giorno_notte.setBackgroundResource(R.drawable.lv3_a);
             }
         }
     }  

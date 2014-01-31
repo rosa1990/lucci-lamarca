@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
         exit = (Button) findViewById (R.id.button3);
         select = (Button) findViewById (R.id.button2);
         continua = (Button) findViewById (R.id.button1);
+
         
         //Quit Dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
