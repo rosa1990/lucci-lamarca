@@ -48,7 +48,7 @@ public class SelectLV extends Activity {
                 	}else Toast.makeText(SelectLV.this, "Devi ancora sbloccarlo!", Toast.LENGTH_SHORT).show();
                 	break;
                 default: 
-                	Toast.makeText(SelectLV.this, "Working in progress", Toast.LENGTH_SHORT).show();
+                	Toast.makeText(SelectLV.this, "Work in progress", Toast.LENGTH_SHORT).show();
 	        	break;
 	        	}
 	        }
