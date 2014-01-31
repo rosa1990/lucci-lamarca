@@ -44,7 +44,7 @@ public class SelectLV extends Activity {
                 	break;
                 case 2: 
                 	if(lastLevel>=position){
-                    	startActivity(new Intent(SelectLV.this,Livello2Activity.class));
+                    	startActivity(new Intent(SelectLV.this,Livello3Activity.class));
                 	}else Toast.makeText(SelectLV.this, "Devi ancora sbloccarlo!", Toast.LENGTH_SHORT).show();
                 	break;
                 default: 
