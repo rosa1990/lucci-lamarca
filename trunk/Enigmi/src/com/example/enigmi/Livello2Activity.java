@@ -69,35 +69,36 @@ public class Livello2Activity extends Activity {
 	private void startRecording() {
 		if (mRecorder == null) {
 
-        mRecorder = new MediaRecorder();
-        mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-       String audio_file = Environment.getExternalStorageDirectory().getAbsolutePath() + "/audio_recording.3gp";
-        Log.d("FILE PATH ORIGINAL", audio_file);
-        mRecorder.setOutputFile(audio_file);
-        mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+          mRecorder = new MediaRecorder();
+          mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+          mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+          String audio_file = Environment.getExternalStorageDirectory().getAbsolutePath() + "/audio_recording.3gp";
+          Log.d("FILE PATH ORIGINAL", audio_file);
+          mRecorder.setOutputFile(audio_file);
+          mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
 
-        try {
-            mRecorder.prepare();
-        } catch (IOException e) {
-            Log.e(LOG_TAG, "prepare() failed");
-        }
-        mRecorder.getMaxAmplitude();
-        mRecorder.start();
-        amplitude = getAmplitudeEMA();
-       
+          try {
+              mRecorder.prepare();
+          } catch (IOException e) {
+              Log.e(LOG_TAG, "prepare() failed");
+          }
+          mRecorder.getMaxAmplitude();
+          mRecorder.start();
+          mEMA = 0.0;
+          amplitude = getAmplitudeEMA();
+          
 		}
     }
 
     private void stopRecording() {
     	
     	if (mRecorder != null) {
-    		 amplitude = getAmplitudeEMA();
-    	       
+    	    amplitude = getAmplitudeEMA();
             mRecorder.stop();   
             mRecorder.release();
             mRecorder = null;
     }
+    	//verifica che ampiezza del suono sia compresa tra 0 e 2
         if (amplitude>0 && amplitude<2){
 			  mRecorder = null;
 			  start.setVisibility(View.INVISIBLE);
