@@ -75,7 +75,7 @@ public class Livello3Activity extends Activity implements SensorEventListener{
         if (event.sensor.getType() == Sensor.TYPE_LIGHT) {
             //il sensore di luce ha cambiato stato
             float luminosità=event.values[0];
-            if(luminosità<50){
+            if(luminosità<30){
                 //è buio
                 giorno_notte.setImageResource(R.drawable.lv3_b);
             }
